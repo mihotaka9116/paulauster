@@ -680,3 +680,31 @@ blockquote {
         left: -46px;
     }
 }
+
+/* 記事一覧 */
+.posts-container {
+	display: grid;
+	grid-template-columns: 1fr; /* 2から1に変更 */
+	gap: 40px 25px; /* 上下の余白を少し広げると読みやすくなります */
+}
+
+@media (min-width: 768px) {
+	.posts-container {
+		grid-template-columns: repeat(3, 1fr); /* PCでは3列を維持 */
+	}
+}
+
+/* 画像とテキストのセクション */
+.imgtext-container {
+	display: flex;
+	flex-direction: column;
+	gap: 30px; /* スマホでは少し狭めてまとまりを出す */
+}
+
+@media (min-width: 768px) {
+	.imgtext-container {
+		flex-direction: row;
+		align-items: center;
+		gap: clamp(45px, 6vw, 80px); /* PCでは元の広さに */
+	}
+}
