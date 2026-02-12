@@ -708,3 +708,33 @@ blockquote {
 		gap: clamp(45px, 6vw, 80px); /* PCでは元の広さに */
 	}
 }
+
+/* --- 「愛用のタイプライター」「偶然の物語」の写真を小さくする --- */
+
+@media (min-width: 768px) {
+    /* 画像とテキストの比率を調整（現在は flex: 1 と 2 ） */
+    .imgtext-container > .text {
+        flex: 1.2; /* テキストを少し広く */
+    }
+
+    .imgtext-container > .img {
+        flex: 0.8; /* 画像を小さく（1より小さく設定） */
+        max-width: 400px; /* 最大幅を制限してさらに小さく見せる */
+    }
+
+    /* 画像そのもののサイズを枠内に収める */
+    .imgtext-container > .img img {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* 切り抜かずに全体を表示 */
+        margin: 0 auto;
+    }
+}
+
+/* スマホ表示の際も大きすぎないように調整 */
+@media (max-width: 767px) {
+    .imgtext-container > .img {
+        max-width: 250px; /* スマホでの幅を制限 */
+        margin: 0 auto; /* 中央寄せ */
+    }
+}
