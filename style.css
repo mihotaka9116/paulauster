@@ -468,152 +468,115 @@ img {
 .plan .btn {
 	width: auto;
 }
+/* --- 
+   Paul Auster Style Adjustments
+   --- */
 
-/* 基本設定の変更 */
+/* 全体のトーン：紙のような質感と深いネイビー */
 body {
-    margin: 0;
-    background-color: #f4f4f7; /* 明るいグレーに変更 */
-    color: #2c3e50; /* 深みのあるネイビー寄りの黒 */
-    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    background-color: #f0f2f5; /* 落ち着いた背景グレー */
+    color: #2c3e50; /* 濃いネイビーグレー */
+    font-family: "Georgia", "Hiragino Mincho ProN", serif; /* 文学的なセリフ体推奨 */
 }
 
-/* ヘッダーの境界線をネイビーに */
+/* ヘッダー：境界線を細く知的な印象に */
 .header {
-    height: 112px;
-    background-color: #ffffff;
-    border-bottom: 3px solid #1a2a6c; /* アクセントのネイビー */
+    border-bottom: 2px solid #1a2a6c;
 }
 
-/* ボタン：オレンジからネイビーに変更 */
-.btn {
-    background-color: #1a2a6c; /* ミッドナイトネイビー */
-    color: #ffffff;
-    transition: background-color 0.3s;
+.header-container .site span {
+    letter-spacing: 0.1em;
 }
 
-.btn:hover {
-    background-color: #0d1642; /* さらに深いネイビー */
-}
-
-/* 装飾ライン：赤から落ち着いたグレーブルーに変更 */
-.heading-decoration::after {
-    border-top: solid 2px #546e7a; /* ブルーグレー */
-}
-
-/* サブタイトルの色 */
-.heading-decoration + p {
-    color: #78909c;
-}
-
-/* 記事一覧セクションの背景を薄いグレーに */
-.posts {
-    padding: var(--v-space) 0;
-    background-color: #eceff1; 
-}
-
-/* セクション見出し（背景にある大きな文字） */
-.heading {
-    color: #cfd8dc; /* 背景に溶け込む薄いグレー */
-}
-
-.heading span {
-    color: #1a2a6c; /* 補足文字をネイビーにして引き締める */
-    font-weight: bold;
-}
-
-/* 記事タイトルの色 */
-.post h3 {
-    color: #1a2a6c;
-}
-
-.hero h1 {
-    letter-spacing: 0.15em; /* 字間を広げて高級感を出す */
-    color: #ffffff;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* 文字を読みやすく */
-}
-
-/* 年表全体のセクション */
-.timeline {
-    padding: var(--v-space) 0;
-    background-color: #ffffff;
-}
-
-.timeline-container {
+/* ヒーローエリア：オースターの都会的な孤独感を演出 */
+.hero {
     position: relative;
-    max-width: 800px;
-    margin: 40px auto 0;
-    padding-left: 30px; /* モバイル用の余白 */
+    background-color: #1a2a6c; /* 画像がない場合のフォールバック */
 }
 
-/* 垂直な線 */
-.timeline-container::before {
+.hero::after {
     content: '';
     position: absolute;
-    left: 7px; /* 線の位置 */
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: #1a2a6c; /* ネイビーの線 */
+    inset: 0;
+    background: rgba(26, 42, 108, 0.4); /* ネイビーのオーバーレイ */
 }
 
-/* 各アイテム */
-.timeline-item {
-    position: relative;
-    margin-bottom: 50px;
-}
-
-/* 年代のドット */
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -28px;
-    top: 8px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #1a2a6c;
-    border: 3px solid #ffffff;
+.hero-container {
     z-index: 1;
 }
 
-/* 年代のテキスト */
-.timeline-item .year {
+.hero h1 {
     font-family: "Montserrat", sans-serif;
-    font-size: 20px;
-    font-weight: bold;
+    letter-spacing: 0.2em;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+/* ボタン：装飾を排したミニマルなデザイン */
+.btn {
+    background-color: #1a2a6c;
+    border: 1px solid #1a2a6c;
+    border-radius: 2px; /* 角を鋭角にして都会的に */
+    font-family: "Montserrat", sans-serif;
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    background-color: transparent;
     color: #1a2a6c;
-    margin-bottom: 5px;
+    filter: none;
 }
 
-/* 内容のボックス */
+/* セクション見出し：背景の巨大文字をさらに薄く */
+.heading {
+    color: rgba(207, 216, 220, 0.3); /* より背景に溶け込ませる */
+}
+
+.heading span {
+    color: #1a2a6c;
+    border-bottom: 1px solid #1a2a6c;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* 年表：線をより細く、繊細に */
+.timeline {
+    background-color: #ffffff;
+}
+
+.timeline-container::before {
+    width: 1px; /* 線を細く */
+    background-color: #cfd8dc; /* 線は主張しすぎないグレーに */
+}
+
+.timeline-item .year {
+    color: #1a2a6c;
+    font-size: 1.2rem;
+}
+
 .timeline-item .content {
-    background-color: #f4f4f7;
-    padding: 20px;
-    border-radius: 8px;
-    border-left: 4px solid #546e7a; /* グレーブルーのアクセント */
+    background-color: #f8f9fa;
+    border-left: 3px solid #1a2a6c; /* ネイビーの縦線で強調 */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-.timeline-item h3 {
-    font-size: 18px;
-    margin-bottom: 8px;
-    color: #222222;
+/* 引用文（blockquote）：レビューページ用 */
+blockquote {
+    margin: 2em 0;
+    padding: 1.5em;
+    background-color: #eceff1;
+    border-left: 4px solid #546e7a;
+    font-style: italic;
+    color: #455a64;
 }
 
-.timeline-item p {
-    font-size: 14px;
-    color: #555555;
-    line-height: 1.6;
+/* 記事カード：タイポグラフィの調整 */
+.post h3 {
+    color: #1a2a6c;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
 }
 
-/* PCサイズでの調整（必要に応じて） */
-@media (min-width: 768px) {
-    .timeline-container {
-        padding-left: 50px;
-    }
-    .timeline-container::before {
-        left: 20px;
-    }
-    .timeline-item::before {
-        left: -35px;
-    }
+.post p {
+    color: #546e7a;
 }
