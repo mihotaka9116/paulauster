@@ -580,3 +580,23 @@ blockquote {
 .post p {
     color: #546e7a;
 }
+
+.footer {
+	padding: 80px 0 40px;
+	background-color: #1a2a6c; /* 深いネイビーに変更 */
+	color: #ffffff; /* 文字を白に */
+}
+
+.footer-menu a {
+	color: rgba(255, 255, 255, 0.7); /* 少し透けた白 */
+}
+
+.footer-menu a:hover {
+	color: #ffffff; /* ホバーでハッキリさせる */
+}
+
+.footer-copy {
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 11px;
+	margin-top: 40px;
+}
