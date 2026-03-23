@@ -476,10 +476,10 @@ img {
 body {
     background-color: #f0f2f5; /* 落ち着いた背景グレー */
     color: #2c3e50; /* 濃いネイビーグレー */
-    font-family: "Georgia", "Hiragino Mincho ProN", serif; /* 文学的なセリフ体推奨 */
+    font-family: "Georgia", "Hiragino Mincho ProN", serif; /* 文学的なセリフ体 */
 }
 
-/* ヘッダー：境界線を細く知的な印象に */
+/* ヘッダー：境界線を細く */
 .header {
     border-bottom: 2px solid #1a2a6c;
 }
@@ -488,7 +488,7 @@ body {
     letter-spacing: 0.1em;
 }
 
-/* ヒーローエリア：オースターの都会的な孤独感を演出 */
+/* ヒーローエリア */
 .hero {
     position: relative;
     background-color: #1a2a6c; /* 画像がない場合のフォールバック */
@@ -512,11 +512,11 @@ body {
     text-transform: uppercase;
 }
 
-/* ボタン：装飾を排したミニマルなデザイン */
+/* ボタン */
 .btn {
     background-color: #1a2a6c;
     border: 1px solid #1a2a6c;
-    border-radius: 2px; /* 角を鋭角にして都会的に */
+    border-radius: 2px; 
     font-family: "Montserrat", sans-serif;
     transition: all 0.4s ease;
 }
@@ -527,7 +527,7 @@ body {
     filter: none;
 }
 
-/* セクション見出し：背景の巨大文字をさらに薄く */
+/* セクション見出し：背景の文字をさらに薄く */
 .heading {
     color: rgba(207, 216, 220, 0.3); /* より背景に溶け込ませる */
 }
@@ -668,7 +668,7 @@ blockquote {
     color: #1a2a6c;
 }
 
-/* レスポンシブ調整（PCでの見栄え） */
+/* レスポンシブ調整（PC） */
 @media (min-width: 768px) {
     .timeline-container {
         padding-left: 60px;
@@ -684,8 +684,8 @@ blockquote {
 /* 記事一覧 */
 .posts-container {
 	display: grid;
-	grid-template-columns: 1fr; /* 2から1に変更 */
-	gap: 40px 25px; /* 上下の余白を少し広げると読みやすくなります */
+	grid-template-columns: 1fr; 
+	gap: 40px 25px; /* 上下の余白を少し広げる */
 }
 
 @media (min-width: 768px) {
